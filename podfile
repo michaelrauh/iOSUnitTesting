@@ -1,0 +1,9 @@
+target 'iOSUnitTesting' do
+  use_frameworks!
+
+  target 'iOSUnitTestingTests' do
+    inherit! :search_paths
+    pod 'Moxie', '~> 0.1'
+  end
+
+end

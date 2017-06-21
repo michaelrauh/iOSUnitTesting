@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "9F3E327CF831BD16FE6864CBF5621191430CBE41",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "9F3E327CF831BD16FE6864CBF5621191430CBE41" : 9223372036854775807,
+    "5B328250F02E833E32D161F3678BDFC74E60F1E7" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "05EFA777-8A40-40F5-8299-224D97C5C8CE",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "9F3E327CF831BD16FE6864CBF5621191430CBE41" : "iOSUnitTesting\/",
+    "5B328250F02E833E32D161F3678BDFC74E60F1E7" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "iOSUnitTesting",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "iOSUnitTesting.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/michaelrauh\/newHobbies.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "5B328250F02E833E32D161F3678BDFC74E60F1E7"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/michaelrauh\/iOSUnitTesting.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9F3E327CF831BD16FE6864CBF5621191430CBE41"
+    }
+  ]
+}
