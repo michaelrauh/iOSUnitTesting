@@ -13,4 +13,10 @@ class iOSUnitTestingTests: XCTestCase {
         _ = subject.view
         XCTAssertEqual(subject.someLabel.text, "This is some text")
     }
+    
+    func testThatALabelIsSetOnButtonTap() {
+        _ = subject.view
+        subject.changeTextButton.sendActions(for: .touchUpInside)
+        XCTAssertEqual(subject.otherLabel.text, "This is different text")
+    }
 }
