@@ -6,11 +6,16 @@ class ViewController: UIViewController {
     @IBOutlet var otherLabel: UILabel!
     @IBOutlet var changeTextButton: UIButton!
     @IBOutlet var otherButton: UIButton!
+    @IBOutlet var thirdLabel: UILabel!
+    
     var navigator = Navigator()
+    var viewModel = ExampleViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         someLabel.text = "This is some text"
+        let resultNumber = viewModel.calculate(forNumber: 4)
+        thirdLabel.text = "your number is \(resultNumber)"
     }
     
     @IBAction func changeTextButtonTapped() {

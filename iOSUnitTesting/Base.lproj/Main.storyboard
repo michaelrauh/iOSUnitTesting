@@ -49,6 +49,13 @@
                                     <action selector="otherButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="7ve-6u-bCB"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JzE-pp-daf">
+                                <rect key="frame" x="10" y="262" width="365" height="87"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -66,10 +73,12 @@
                         <outlet property="otherButton" destination="TLD-Hw-US2" id="8vz-UF-OjS"/>
                         <outlet property="otherLabel" destination="fQj-sy-uco" id="2wk-jG-eyf"/>
                         <outlet property="someLabel" destination="CPX-7R-eO5" id="Own-sQ-b4e"/>
+                        <outlet property="thirdLabel" destination="JzE-pp-daf" id="5FQ-vr-WVV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="24.800000000000001" y="36.431784107946029"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="CBk-jx-kc0">

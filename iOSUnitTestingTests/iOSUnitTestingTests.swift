@@ -10,15 +10,28 @@ class MockNavigator: Navigator, Mock {
     }
 }
 
+class MockExampleViewModel: ExampleViewModel, Mock {
+    var moxie = Moxie()
+    
+    override func calculate(forNumber number: Int) -> Int {
+        return value(forFunction: "calculate") ?? 0
+    }
+}
+
 class iOSUnitTestingTests: XCTestCase {
     var subject: ViewController!
     var mockNavigator: MockNavigator!
+    var mockViewModel: MockExampleViewModel!
     
     override func setUp() {
         super.setUp()
         subject = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ViewController") as? ViewController
+        
         mockNavigator = MockNavigator()
+        mockViewModel = MockExampleViewModel()
+        
         subject.navigator = mockNavigator
+        subject.viewModel = mockViewModel
     }
     
     func testThatALabelIsSetOnViewDidLoad() {
@@ -36,5 +49,11 @@ class iOSUnitTestingTests: XCTestCase {
         _ = subject.view
         subject.otherButton.sendActions(for: .touchUpInside)
         XCTAssertTrue(mockNavigator.invoked(function: "show", with: [subject, "otherVC"]))
+    }
+    
+    func testThatALabelCanBeSetBasedUponAViewModel() {
+        mockViewModel.stub(function: "calculate", return: 10)
+        _ = subject.view
+        XCTAssertEqual(subject.thirdLabel.text, "your number is 10")
     }
 }

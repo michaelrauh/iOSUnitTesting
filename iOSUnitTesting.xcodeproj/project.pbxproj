@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1F7D8FFC9C2B68669606176B /* Pods_iOSUnitTestingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47ED7BD34C0941CA44DF4482 /* Pods_iOSUnitTestingTests.framework */; };
 		5A3E5F911EF9F7F600CE8B95 /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3E5F901EF9F7F600CE8B95 /* Navigator.swift */; };
+		5A7993791EFC9F3F00D56F14 /* ExampleViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7993781EFC9F3F00D56F14 /* ExampleViewModelTests.swift */; };
+		5A79937B1EFC9F6E00D56F14 /* ExampleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A79937A1EFC9F6E00D56F14 /* ExampleViewModel.swift */; };
 		5ACCB2B41EF8AA4A003CC84D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACCB2B31EF8AA4A003CC84D /* AppDelegate.swift */; };
 		5ACCB2B61EF8AA4A003CC84D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACCB2B51EF8AA4A003CC84D /* ViewController.swift */; };
 		5ACCB2B91EF8AA4A003CC84D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5ACCB2B71EF8AA4A003CC84D /* Main.storyboard */; };
@@ -33,6 +35,8 @@
 		0F486E8B60F066341BA87C4C /* Pods-iOSUnitTesting.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSUnitTesting.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSUnitTesting/Pods-iOSUnitTesting.debug.xcconfig"; sourceTree = "<group>"; };
 		47ED7BD34C0941CA44DF4482 /* Pods_iOSUnitTestingTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSUnitTestingTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A3E5F901EF9F7F600CE8B95 /* Navigator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
+		5A7993781EFC9F3F00D56F14 /* ExampleViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleViewModelTests.swift; sourceTree = "<group>"; };
+		5A79937A1EFC9F6E00D56F14 /* ExampleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleViewModel.swift; sourceTree = "<group>"; };
 		5ACCB2B01EF8AA4A003CC84D /* iOSUnitTesting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSUnitTesting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5ACCB2B31EF8AA4A003CC84D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5ACCB2B51EF8AA4A003CC84D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +111,7 @@
 				5ACCB2BC1EF8AA4A003CC84D /* LaunchScreen.storyboard */,
 				5ACCB2BF1EF8AA4A003CC84D /* Info.plist */,
 				5A3E5F901EF9F7F600CE8B95 /* Navigator.swift */,
+				5A79937A1EFC9F6E00D56F14 /* ExampleViewModel.swift */,
 			);
 			path = iOSUnitTesting;
 			sourceTree = "<group>";
@@ -116,6 +121,7 @@
 			children = (
 				5ACCB2C81EF8AA4A003CC84D /* iOSUnitTestingTests.swift */,
 				5ACCB2CA1EF8AA4A003CC84D /* Info.plist */,
+				5A7993781EFC9F3F00D56F14 /* ExampleViewModelTests.swift */,
 			);
 			path = iOSUnitTestingTests;
 			sourceTree = "<group>";
@@ -335,6 +341,7 @@
 			files = (
 				5ACCB2B61EF8AA4A003CC84D /* ViewController.swift in Sources */,
 				5ACCB2B41EF8AA4A003CC84D /* AppDelegate.swift in Sources */,
+				5A79937B1EFC9F6E00D56F14 /* ExampleViewModel.swift in Sources */,
 				5A3E5F911EF9F7F600CE8B95 /* Navigator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -343,6 +350,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A7993791EFC9F3F00D56F14 /* ExampleViewModelTests.swift in Sources */,
 				5ACCB2C91EF8AA4A003CC84D /* iOSUnitTestingTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
