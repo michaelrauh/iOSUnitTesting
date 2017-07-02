@@ -8,6 +8,7 @@ class ViewController: UIViewController {
     @IBOutlet var otherButton: UIButton!
     @IBOutlet var thirdLabel: UILabel!
     @IBOutlet var networkButton: UIButton!
+    @IBOutlet var pokemonIndex: UITextField!
     
     var navigator = Navigator()
     var viewModel = ExampleViewModel()
@@ -28,7 +29,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func networkButtonTapped() {
-        viewModel.makeCall(delegate: responseHandler())
+        viewModel.makeCall(withDelegate: responseHandler(), withPath: pokemonIndex.text!)
     }
 }
 

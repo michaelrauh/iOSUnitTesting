@@ -14,4 +14,6 @@ class Pokemon: Mappable {
     func mapping(map: Map) {
         name    <- map["name"]
     }
+    
+    init() {}
 }
