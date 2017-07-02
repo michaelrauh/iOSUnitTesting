@@ -28,7 +28,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func networkButtonTapped() {
-       viewModel.makeCall()
+        viewModel.makeCall(delegate: responseHandler())
     }
 }
 
