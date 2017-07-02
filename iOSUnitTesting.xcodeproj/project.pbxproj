@@ -14,6 +14,7 @@
 		5A7D07181F094EBE00C2C410 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7D07171F094EBE00C2C410 /* Pokemon.swift */; };
 		5A7D071A1F0983D700C2C410 /* Requestor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7D07191F0983D700C2C410 /* Requestor.swift */; };
 		5A7D071C1F09844100C2C410 /* ResponseDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7D071B1F09844100C2C410 /* ResponseDelegate.swift */; };
+		5A7D071E1F098B9500C2C410 /* ViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7D071D1F098B9500C2C410 /* ViewDelegate.swift */; };
 		5ACCB2B41EF8AA4A003CC84D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACCB2B31EF8AA4A003CC84D /* AppDelegate.swift */; };
 		5ACCB2B61EF8AA4A003CC84D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACCB2B51EF8AA4A003CC84D /* ViewController.swift */; };
 		5ACCB2B91EF8AA4A003CC84D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5ACCB2B71EF8AA4A003CC84D /* Main.storyboard */; };
@@ -40,9 +41,10 @@
 		5A3E5F901EF9F7F600CE8B95 /* Navigator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
 		5A7993781EFC9F3F00D56F14 /* ExampleViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleViewModelTests.swift; sourceTree = "<group>"; };
 		5A79937A1EFC9F6E00D56F14 /* ExampleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleViewModel.swift; sourceTree = "<group>"; };
-		5A7D07171F094EBE00C2C410 /* Pokemon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Pokemon.swift; path = iOSUnitTesting/Pokemon.swift; sourceTree = "<group>"; };
-		5A7D07191F0983D700C2C410 /* Requestor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Requestor.swift; sourceTree = "<group>"; };
-		5A7D071B1F09844100C2C410 /* ResponseDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseDelegate.swift; sourceTree = "<group>"; };
+		5A7D07171F094EBE00C2C410 /* Pokemon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
+		5A7D07191F0983D700C2C410 /* Requestor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Requestor.swift; path = Requestor.swift; sourceTree = "<group>"; };
+		5A7D071B1F09844100C2C410 /* ResponseDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResponseDelegate.swift; path = ResponseDelegate.swift; sourceTree = "<group>"; };
+		5A7D071D1F098B9500C2C410 /* ViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewDelegate.swift; path = ViewDelegate.swift; sourceTree = "<group>"; };
 		5ACCB2B01EF8AA4A003CC84D /* iOSUnitTesting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSUnitTesting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5ACCB2B31EF8AA4A003CC84D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5ACCB2B51EF8AA4A003CC84D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -90,14 +92,11 @@
 		5ACCB2A71EF8AA4A003CC84D = {
 			isa = PBXGroup;
 			children = (
-				5A7D07191F0983D700C2C410 /* Requestor.swift */,
-				5A7D071B1F09844100C2C410 /* ResponseDelegate.swift */,
-				5A7D07171F094EBE00C2C410 /* Pokemon.swift */,
+				3E0AE2BB5A3D1D439E76834D /* Frameworks */,
+				970A1A0876B8DCD5170088B1 /* Pods */,
+				5ACCB2B11EF8AA4A003CC84D /* Products */,
 				5ACCB2B21EF8AA4A003CC84D /* iOSUnitTesting */,
 				5ACCB2C71EF8AA4A003CC84D /* iOSUnitTestingTests */,
-				5ACCB2B11EF8AA4A003CC84D /* Products */,
-				970A1A0876B8DCD5170088B1 /* Pods */,
-				3E0AE2BB5A3D1D439E76834D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -114,13 +113,17 @@
 			isa = PBXGroup;
 			children = (
 				5ACCB2B31EF8AA4A003CC84D /* AppDelegate.swift */,
-				5ACCB2B51EF8AA4A003CC84D /* ViewController.swift */,
-				5ACCB2B71EF8AA4A003CC84D /* Main.storyboard */,
 				5ACCB2BA1EF8AA4A003CC84D /* Assets.xcassets */,
-				5ACCB2BC1EF8AA4A003CC84D /* LaunchScreen.storyboard */,
-				5ACCB2BF1EF8AA4A003CC84D /* Info.plist */,
-				5A3E5F901EF9F7F600CE8B95 /* Navigator.swift */,
 				5A79937A1EFC9F6E00D56F14 /* ExampleViewModel.swift */,
+				5ACCB2BF1EF8AA4A003CC84D /* Info.plist */,
+				5ACCB2BC1EF8AA4A003CC84D /* LaunchScreen.storyboard */,
+				5ACCB2B71EF8AA4A003CC84D /* Main.storyboard */,
+				5A3E5F901EF9F7F600CE8B95 /* Navigator.swift */,
+				5A7D07171F094EBE00C2C410 /* Pokemon.swift */,
+				5A7D07191F0983D700C2C410 /* Requestor.swift */,
+				5A7D071B1F09844100C2C410 /* ResponseDelegate.swift */,
+				5ACCB2B51EF8AA4A003CC84D /* ViewController.swift */,
+				5A7D071D1F098B9500C2C410 /* ViewDelegate.swift */,
 			);
 			path = iOSUnitTesting;
 			sourceTree = "<group>";
@@ -128,9 +131,9 @@
 		5ACCB2C71EF8AA4A003CC84D /* iOSUnitTestingTests */ = {
 			isa = PBXGroup;
 			children = (
-				5ACCB2C81EF8AA4A003CC84D /* iOSUnitTestingTests.swift */,
-				5ACCB2CA1EF8AA4A003CC84D /* Info.plist */,
 				5A7993781EFC9F3F00D56F14 /* ExampleViewModelTests.swift */,
+				5ACCB2CA1EF8AA4A003CC84D /* Info.plist */,
+				5ACCB2C81EF8AA4A003CC84D /* iOSUnitTestingTests.swift */,
 			);
 			path = iOSUnitTestingTests;
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 				5A7D07181F094EBE00C2C410 /* Pokemon.swift in Sources */,
 				5ACCB2B61EF8AA4A003CC84D /* ViewController.swift in Sources */,
 				5A7D071C1F09844100C2C410 /* ResponseDelegate.swift in Sources */,
+				5A7D071E1F098B9500C2C410 /* ViewDelegate.swift in Sources */,
 				5A7D071A1F0983D700C2C410 /* Requestor.swift in Sources */,
 				5ACCB2B41EF8AA4A003CC84D /* AppDelegate.swift in Sources */,
 				5A79937B1EFC9F6E00D56F14 /* ExampleViewModel.swift in Sources */,
@@ -384,6 +388,7 @@
 				5ACCB2B81EF8AA4A003CC84D /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		5ACCB2BC1EF8AA4A003CC84D /* LaunchScreen.storyboard */ = {
@@ -392,6 +397,7 @@
 				5ACCB2BD1EF8AA4A003CC84D /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

@@ -3,6 +3,7 @@ import Foundation
 class ExampleViewModel: ResponseDelegate {
     
     var viewDelegate: ViewDelegate?
+    var pokemonName: String?
     
     func calculate(forNumber number: Int) -> Int {
         return number * 2
@@ -14,19 +15,7 @@ class ExampleViewModel: ResponseDelegate {
     
     func onSuccess(result: Any) {
         let pokemon = result as! Pokemon
-        Cache.shared.pokemonName = pokemon.name
+        pokemonName = pokemon.name
         viewDelegate?.onSuccess()
     }
-    
-    var pokemonName: String {
-        return Cache.shared.pokemonName ?? ""
-    }
-}
-
-class Cache {
-    var pokemonName: String?
-    
-    static let shared = Cache()
-    
-    private init (){}
 }

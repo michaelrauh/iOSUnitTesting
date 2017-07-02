@@ -1,8 +1,6 @@
 import Foundation
 import ObjectMapper
 
-// TODO unspike
-
 class Pokemon: Mappable {
     var name: String?
     
@@ -10,10 +8,7 @@ class Pokemon: Mappable {
         
     }
     
-    // Mappable
     func mapping(map: Map) {
         name    <- map["name"]
     }
-    
-    init() {}
 }

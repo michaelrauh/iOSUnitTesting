@@ -1,9 +1,5 @@
 import UIKit
 
-protocol ViewDelegate {
-    func onSuccess() -> Void
-}
-
 class ViewController: UIViewController, ViewDelegate {
 
     @IBOutlet var someLabel: UILabel!

@@ -14,14 +14,13 @@ class Requestor {
             .validate(statusCode: 200...299)
             .responseObject { (response: DataResponse<T>) in
                 
-                
-                switch response.result {
-                case .success:
-                    let object = response.result.value
-                    delegate.onSuccess(result: object as Any)
-                case .failure(let error):
-                    delegate.onFailure(error: error)
-                }
+            switch response.result {
+            case .success:
+                let object = response.result.value
+                delegate.onSuccess(result: object as Any)
+            case .failure(let error):
+                delegate.onFailure(error: error)
+            }
         }
     }
 }
