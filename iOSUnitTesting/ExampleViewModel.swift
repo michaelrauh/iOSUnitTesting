@@ -2,6 +2,8 @@ import Foundation
 
 class ExampleViewModel: ResponseDelegate {
     
+    var viewDelegate: ViewDelegate?
+    
     func calculate(forNumber number: Int) -> Int {
         return number * 2
     }
@@ -13,5 +15,6 @@ class ExampleViewModel: ResponseDelegate {
     func onSuccess(result: Any) {
         let pokemon = result as! Pokemon
         print(pokemon.name as Any)
+        viewDelegate?.onSuccess()
     }
 }

@@ -1,6 +1,10 @@
 import UIKit
 
-class ViewController: UIViewController {
+protocol ViewDelegate {
+    func onSuccess() -> Void
+}
+
+class ViewController: UIViewController, ViewDelegate {
 
     @IBOutlet var someLabel: UILabel!
     @IBOutlet var otherLabel: UILabel!
@@ -18,6 +22,7 @@ class ViewController: UIViewController {
         someLabel.text = "This is some text"
         let resultNumber = viewModel.calculate(forNumber: 4)
         thirdLabel.text = "your number is \(resultNumber)"
+        viewModel.viewDelegate = self
     }
     
     @IBAction func changeTextButtonTapped() {
@@ -30,6 +35,10 @@ class ViewController: UIViewController {
     
     @IBAction func networkButtonTapped() {
         viewModel.makeCall(withPath: pokemonIndex.text!)
+    }
+    
+    func onSuccess() {
+        print("HERE")
     }
 }
 
