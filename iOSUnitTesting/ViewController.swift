@@ -13,6 +13,7 @@ class ViewController: UIViewController, ViewDelegate {
     @IBOutlet var thirdLabel: UILabel!
     @IBOutlet var networkButton: UIButton!
     @IBOutlet var pokemonIndex: UITextField!
+    @IBOutlet var pokemonNameLabel: UILabel!
     
     var navigator = Navigator()
     var viewModel = ExampleViewModel()
@@ -38,7 +39,7 @@ class ViewController: UIViewController, ViewDelegate {
     }
     
     func onSuccess() {
-        print("HERE")
+        pokemonNameLabel.text = viewModel.pokemonName
     }
 }
 

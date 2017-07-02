@@ -71,6 +71,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="pokemon name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V16-Rg-GuK">
+                                <rect key="frame" x="155" y="323" width="118" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -89,6 +96,7 @@
                         <outlet property="otherButton" destination="TLD-Hw-US2" id="8vz-UF-OjS"/>
                         <outlet property="otherLabel" destination="fQj-sy-uco" id="2wk-jG-eyf"/>
                         <outlet property="pokemonIndex" destination="Zyz-OQ-coG" id="lOQ-vg-zBj"/>
+                        <outlet property="pokemonNameLabel" destination="V16-Rg-GuK" id="36d-eA-9mU"/>
                         <outlet property="someLabel" destination="CPX-7R-eO5" id="Own-sQ-b4e"/>
                         <outlet property="thirdLabel" destination="JzE-pp-daf" id="5FQ-vr-WVV"/>
                     </connections>

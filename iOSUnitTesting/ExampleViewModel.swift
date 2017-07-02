@@ -14,7 +14,19 @@ class ExampleViewModel: ResponseDelegate {
     
     func onSuccess(result: Any) {
         let pokemon = result as! Pokemon
-        print(pokemon.name as Any)
+        Cache.shared.pokemonName = pokemon.name
         viewDelegate?.onSuccess()
     }
+    
+    var pokemonName: String {
+        return Cache.shared.pokemonName ?? ""
+    }
+}
+
+class Cache {
+    var pokemonName: String?
+    
+    static let shared = Cache()
+    
+    private init (){}
 }
