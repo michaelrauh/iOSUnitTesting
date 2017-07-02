@@ -7,6 +7,7 @@ class ViewController: UIViewController {
     @IBOutlet var changeTextButton: UIButton!
     @IBOutlet var otherButton: UIButton!
     @IBOutlet var thirdLabel: UILabel!
+    @IBOutlet var networkButton: UIButton!
     
     var navigator = Navigator()
     var viewModel = ExampleViewModel()
@@ -24,6 +25,10 @@ class ViewController: UIViewController {
     
     @IBAction func otherButtonTapped() {
         navigator.show(caller: self, destination: "otherVC")
+    }
+    
+    @IBAction func networkButtonTapped() {
+       viewModel.makeCall()
     }
 }
 

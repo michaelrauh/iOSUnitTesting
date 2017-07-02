@@ -16,6 +16,10 @@ class MockExampleViewModel: ExampleViewModel, Mock {
     override func calculate(forNumber number: Int) -> Int {
         return value(forFunction: "calculate") ?? 0
     }
+    
+    override func makeCall() {
+        record(function: "makeCall")
+    }
 }
 
 class iOSUnitTestingTests: XCTestCase {
@@ -55,5 +59,11 @@ class iOSUnitTestingTests: XCTestCase {
         mockViewModel.stub(function: "calculate", return: 10)
         _ = subject.view
         XCTAssertEqual(subject.thirdLabel.text, "your number is 10")
+    }
+    
+    func testThatTouchingTheNetworkButtonHitsTheNetwork() {
+        _ = subject.view
+        subject.networkButton.sendActions(for: .touchUpInside)
+        XCTAssertTrue(mockViewModel.invoked(function: "makeCall"))
     }
 }

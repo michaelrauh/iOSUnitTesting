@@ -56,6 +56,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IPX-6C-NFs">
+                                <rect key="frame" x="133" y="435" width="108" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Network Button"/>
+                                <connections>
+                                    <action selector="networkButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="HPl-5r-RPL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -70,6 +78,7 @@
                     </view>
                     <connections>
                         <outlet property="changeTextButton" destination="osy-RJ-uGV" id="c6j-zi-sAN"/>
+                        <outlet property="networkButton" destination="IPX-6C-NFs" id="LcF-s1-O6h"/>
                         <outlet property="otherButton" destination="TLD-Hw-US2" id="8vz-UF-OjS"/>
                         <outlet property="otherLabel" destination="fQj-sy-uco" id="2wk-jG-eyf"/>
                         <outlet property="someLabel" destination="CPX-7R-eO5" id="Own-sQ-b4e"/>
