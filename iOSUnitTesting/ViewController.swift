@@ -29,7 +29,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func networkButtonTapped() {
-        viewModel.makeCall(withDelegate: responseHandler(), withPath: pokemonIndex.text!)
+        viewModel.makeCall(withPath: pokemonIndex.text!)
     }
 }
 
