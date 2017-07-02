@@ -4,7 +4,7 @@ import ObjectMapper
 import AlamofireObjectMapper
 
 protocol ResponseDelegate {
-    func onSuccess (result: Pokemon?) -> Void
+    func onSuccess (result: Any) -> Void
     func onFailure(error: Error) -> Void
 }
 
@@ -16,8 +16,9 @@ extension ResponseDelegate {
 }
 
 class responseHandler: ResponseDelegate {
-    func onSuccess(result: Pokemon?) {
-        print(result?.name as Any)
+    func onSuccess(result: Any) {
+        let pokemon = result as! Pokemon
+        print(pokemon.name as Any)
     }
 }
 
@@ -26,7 +27,7 @@ class Requestor {
     
     private init(){}
     
-    func request<T: Mappable>(withDelegate delegate: ResponseDelegate, withPath path: String, cls: T.Type) {
+    func request<T: Mappable, U: ResponseDelegate>(withDelegate delegate: U, withPath path: String, cls: T.Type) {
         
         let URL = "https://pokeapi.co/api/v2/pokemon/\(path)/"
         Alamofire.request(URL)
@@ -36,8 +37,8 @@ class Requestor {
                 
                 switch response.result {
                 case .success:
-                    let pokemon = response.result.value
-                    delegate.onSuccess(result: pokemon as! Pokemon?)
+                    let object = response.result.value
+                    delegate.onSuccess(result: object as Any)
                 case .failure(let error):
                     delegate.onFailure(error: error)
                 }
@@ -51,7 +52,7 @@ class ExampleViewModel {
         return number * 2
     }
     
-    func makeCall(withDelegate delegate: ResponseDelegate, withPath path: String) {
+    func makeCall(withDelegate delegate: responseHandler, withPath path: String) {
         Requestor.shared.request(withDelegate: delegate, withPath: path, cls: Pokemon.self)
     }
 }
