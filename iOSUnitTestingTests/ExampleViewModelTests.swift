@@ -44,12 +44,15 @@ class ExampleViewModelTests: QuickSpec {
                 }
                 
                 it("calls the success callback") {
+                    // TODO use argument captor to get callback
+                    
                     let result = Pokemon()
                     result.name = "Charizard"
                     subject.viewDelegate = viewDelegate
+                    
                     subject.onSuccess(result: result)
-                    XCTAssertEqual(subject.pokemonName, "Charizard")
-                    XCTAssertTrue(viewDelegate.invoked(function: "onSuccess"))
+                    expect(subject.pokemonName).to(equal("Charizard"))
+                    expect(viewDelegate.invoked(function: "onSuccess")).to(beTrue())
                 }
             }
         }

@@ -22,9 +22,6 @@ pod install
   * Demonstrate extending base types, such as Int
   * Demonstrate global handling of errors (there is a place for this but no functionality)
   * Fix callback tests to use argument captors
-  * Switch tests to Quick/Nimble
-  * Use Nimble matchers to test delegate equivalence
-  * Use async Nimble matchers to test the Requestor
 
 ## Concepts purposely ignored
   * Layout
