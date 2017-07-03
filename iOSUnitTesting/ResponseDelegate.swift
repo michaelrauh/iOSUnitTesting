@@ -1,6 +1,8 @@
+import ObjectMapper
+
 protocol ResponseDelegate {
-    associatedtype T
-    func onSuccess (result: T) -> Void
+    associatedtype T: Mappable
+    func onSuccess (result: T?) -> Void
     func onFailure(error: Error) -> Void
 }
 

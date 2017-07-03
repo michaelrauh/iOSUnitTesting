@@ -11,12 +11,13 @@ class ExampleViewModel: ResponseDelegate {
     }
     
     func makeCall(withPath path: String) {
-        Requestor.shared.request(withDelegate: self, withPath: path, cls: Pokemon.self)
+        Requestor.shared.request(withDelegate: self, withPath: path)
     }
     
-    func onSuccess(result: T) {
+    func onSuccess(result: T?) {
         let pokemon = result
-        pokemonName = pokemon.name
+        pokemonName = pokemon?.name
         viewDelegate?.onSuccess()
     }
 }
+    

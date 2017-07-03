@@ -7,17 +7,17 @@ class Requestor {
     
     private init(){}
     
-    func request<T: Mappable, U: ResponseDelegate>(withDelegate delegate: U, withPath path: String, cls: T.Type) {
+    func request<T: ResponseDelegate>(withDelegate delegate: T, withPath path: String) {
         
         let URL = "https://pokeapi.co/api/v2/pokemon/\(path)/"
         Alamofire.request(URL)
             .validate(statusCode: 200...299)
-            .responseObject { (response: DataResponse<T>) in
+            .responseObject { (response: DataResponse<T.T>) in
                 
             switch response.result {
             case .success:
                 let object = response.result.value
-                delegate.onSuccess(result: object as! U.T)
+                delegate.onSuccess(result: object as T.T?)
             case .failure(let error):
                 delegate.onFailure(error: error)
             }
