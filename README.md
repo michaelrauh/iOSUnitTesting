@@ -15,13 +15,17 @@ pod install
   * Singleton pattern in swift
   * Mocking with Moxie
   * Providing default implementations for some but not all protocol methods
+  * Leveraging the delegate pattern for HTTP calls
 
 ## Todo
   * Demonstrate testing protocol extensions via a tame class pattern
   * Demonstrate extending base types, such as Int
   * Demonstrate global handling of errors (there is a place for this but no functionality)
-  * Close gaps in current testing (comparing delegates, capturing delegates for callback testing)
-  
+  * Fix callback tests to use argument captors
+  * Switch tests to Quick/Nimble
+  * Use Nimble matchers to test delegate equivalence
+  * Use async Nimble matchers to test the Requestor
+
 ## Concepts purposely ignored
   * Layout
   * Colors
