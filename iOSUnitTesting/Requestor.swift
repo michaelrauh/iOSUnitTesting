@@ -17,7 +17,7 @@ class Requestor {
             switch response.result {
             case .success:
                 let object = response.result.value
-                delegate.onSuccess(result: object as Any)
+                delegate.onSuccess(result: object as! U.T)
             case .failure(let error):
                 delegate.onFailure(error: error)
             }

@@ -1,6 +1,7 @@
 import Foundation
 
 class ExampleViewModel: ResponseDelegate {
+    typealias T = Pokemon
     
     var viewDelegate: ViewDelegate?
     var pokemonName: String?
@@ -13,8 +14,8 @@ class ExampleViewModel: ResponseDelegate {
         Requestor.shared.request(withDelegate: self, withPath: path, cls: Pokemon.self)
     }
     
-    func onSuccess(result: Any) {
-        let pokemon = result as! Pokemon
+    func onSuccess(result: T) {
+        let pokemon = result
         pokemonName = pokemon.name
         viewDelegate?.onSuccess()
     }

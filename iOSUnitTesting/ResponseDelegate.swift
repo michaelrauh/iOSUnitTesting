@@ -1,5 +1,6 @@
 protocol ResponseDelegate {
-    func onSuccess (result: Any) -> Void
+    associatedtype T
+    func onSuccess (result: T) -> Void
     func onFailure(error: Error) -> Void
 }
 
