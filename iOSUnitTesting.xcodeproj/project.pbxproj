@@ -21,6 +21,7 @@
 		5ACCB2BB1EF8AA4A003CC84D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5ACCB2BA1EF8AA4A003CC84D /* Assets.xcassets */; };
 		5ACCB2BE1EF8AA4A003CC84D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5ACCB2BC1EF8AA4A003CC84D /* LaunchScreen.storyboard */; };
 		5ACCB2C91EF8AA4A003CC84D /* ViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACCB2C81EF8AA4A003CC84D /* ViewControllerTests.swift */; };
+		5AF36F4C1F0AB36200EA35F3 /* RequestorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF36F4B1F0AB36200EA35F3 /* RequestorTests.swift */; };
 		EA5328D5FEC53BF75923F130 /* Pods_iOSUnitTesting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B97383A5FEF7579B7BC332FE /* Pods_iOSUnitTesting.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +56,7 @@
 		5ACCB2C41EF8AA4A003CC84D /* iOSUnitTestingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSUnitTestingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5ACCB2C81EF8AA4A003CC84D /* ViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTests.swift; sourceTree = "<group>"; };
 		5ACCB2CA1EF8AA4A003CC84D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5AF36F4B1F0AB36200EA35F3 /* RequestorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestorTests.swift; sourceTree = "<group>"; };
 		632C7992FB7AA99D6478F3EC /* Pods-iOSUnitTesting.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSUnitTesting.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSUnitTesting/Pods-iOSUnitTesting.release.xcconfig"; sourceTree = "<group>"; };
 		9BF47E07B4AB01C1FD0A30EB /* Pods-iOSUnitTestingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSUnitTestingTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSUnitTestingTests/Pods-iOSUnitTestingTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B97383A5FEF7579B7BC332FE /* Pods_iOSUnitTesting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSUnitTesting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,6 +136,7 @@
 				5A7993781EFC9F3F00D56F14 /* ExampleViewModelTests.swift */,
 				5ACCB2CA1EF8AA4A003CC84D /* Info.plist */,
 				5ACCB2C81EF8AA4A003CC84D /* ViewControllerTests.swift */,
+				5AF36F4B1F0AB36200EA35F3 /* RequestorTests.swift */,
 			);
 			path = iOSUnitTestingTests;
 			sourceTree = "<group>";
@@ -366,6 +369,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AF36F4C1F0AB36200EA35F3 /* RequestorTests.swift in Sources */,
 				5A7993791EFC9F3F00D56F14 /* ExampleViewModelTests.swift in Sources */,
 				5ACCB2C91EF8AA4A003CC84D /* ViewControllerTests.swift in Sources */,
 			);

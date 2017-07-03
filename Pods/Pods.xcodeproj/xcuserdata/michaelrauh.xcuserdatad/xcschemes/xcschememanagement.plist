@@ -19,6 +19,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Nimble.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>ObjectMapper.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -30,6 +35,11 @@
 			<false/>
 		</dict>
 		<key>Pods-iOSUnitTestingTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Quick.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -47,6 +57,11 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>6C4B30D4BB617058D0B03A001FC688A9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
 		<dict>
 			<key>primary</key>
@@ -57,7 +72,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C1B3CB9CEAC5D450F1F4F3A101C3BA66</key>
+		<key>B3BCCFF5191AC8FB76837AA92653A488</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DD7C8BF89FE8053D0A2A2D88BB49CF07</key>
 		<dict>
 			<key>primary</key>
 			<true/>
