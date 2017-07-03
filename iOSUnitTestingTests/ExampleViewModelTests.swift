@@ -1,50 +1,58 @@
-import XCTest
+import Quick
+import Nimble
 import Moxie
 @testable import iOSUnitTesting
 
-class ExampleViewModelTests: XCTestCase {
-    var subject: ExampleViewModel!
-    override func setUp() {
-        super.setUp()
-        subject = ExampleViewModel()
-    }
-    
-    override func tearDown() {
-        subject.requestor = Requestor.shared
-    }
-    
-    func testThatCalculateDoublesNumbers() {
-        XCTAssertEqual(subject.calculate(forNumber: 2), 4)
-    }
-    
-    func testThatMakeCallSetsTheViewDelegate() {
-        let viewDelegate = MockViewDelegate()
-        subject.makeCall(withDelegate:  viewDelegate, withPath: "5")
-        
-        // TODO figure out how to compare the view delegate to itself
-    }
-    
-    func testThatTheRequestIsMadeOnMakeCall() {
-        let mockRequestor = MockRequestor()
-        let viewDelegate = MockViewDelegate()
-        
-        subject.requestor = mockRequestor
-        
-        subject.makeCall(withDelegate: viewDelegate, withPath: "5")
-        
-        XCTAssertTrue(mockRequestor.invoked(function: "request", with: [subject, "5"]))
-    }
-    
-    func testTheSuccessCallback() {
-        // TODO: figure out how to capture the callback
-        
-        let mockViewDelegate = MockViewDelegate()
-        let result = Pokemon()
-        result.name = "Charizard"
-        subject.viewDelegate = mockViewDelegate
-        subject.onSuccess(result: result)
-        XCTAssertEqual(subject.pokemonName, "Charizard")
-        XCTAssertTrue(mockViewDelegate.invoked(function: "onSuccess"))
+class ExampleViewModelTests: QuickSpec {
+    override func spec() {
+        describe("ExampleViewModel") {
+            var subject: ExampleViewModel!
+            
+            beforeEach {
+                subject = ExampleViewModel()
+            }
+            
+            afterEach{
+                subject.requestor = Requestor.shared
+            }
+            
+            describe("calculate") {
+                
+                it("doubles numbers") {
+                    expect(subject.calculate(forNumber: 2)).to(equal(4))
+                }
+            }
+            
+            describe("makeCall") {
+                let viewDelegate = MockViewDelegate()
+                let mockRequestor = MockRequestor()
+                
+                beforeEach {
+                    subject.requestor = mockRequestor
+                }
+                
+                it("sets the view delegate") {
+                    subject.makeCall(withDelegate:  viewDelegate, withPath: "5")
+                    
+                    expect(subject.viewDelegate).to(be(viewDelegate))
+                }
+                
+                it("makes a request") {
+                    subject.makeCall(withDelegate: viewDelegate, withPath: "5")
+                    
+                    expect(mockRequestor.invoked(function: "request", with: [subject, "5"])).to(beTrue())
+                }
+                
+                it("calls the success callback") {
+                    let result = Pokemon()
+                    result.name = "Charizard"
+                    subject.viewDelegate = viewDelegate
+                    subject.onSuccess(result: result)
+                    XCTAssertEqual(subject.pokemonName, "Charizard")
+                    XCTAssertTrue(viewDelegate.invoked(function: "onSuccess"))
+                }
+            }
+        }
     }
 }
 
