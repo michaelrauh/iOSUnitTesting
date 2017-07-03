@@ -10,7 +10,8 @@ class ExampleViewModel: ResponseDelegate {
         return number * 2
     }
     
-    func makeCall(withPath path: String) {
+    func makeCall(withDelegate requestDelegate: ViewDelegate, withPath path: String) {
+        self.viewDelegate = requestDelegate
         Requestor.shared.request(withDelegate: self, withPath: path)
     }
     

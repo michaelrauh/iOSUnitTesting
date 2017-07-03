@@ -19,7 +19,6 @@ class ViewController: UIViewController, ViewDelegate {
         someLabel.text = "This is some text"
         let resultNumber = viewModel.calculate(forNumber: 4)
         thirdLabel.text = "your number is \(resultNumber)"
-        viewModel.viewDelegate = self
     }
     
     @IBAction func changeTextButtonTapped() {
@@ -31,7 +30,7 @@ class ViewController: UIViewController, ViewDelegate {
     }
     
     @IBAction func networkButtonTapped() {
-        viewModel.makeCall(withPath: pokemonIndex.text!)
+        viewModel.makeCall(withDelegate: self, withPath: pokemonIndex.text ?? "")
     }
     
     func onSuccess() {

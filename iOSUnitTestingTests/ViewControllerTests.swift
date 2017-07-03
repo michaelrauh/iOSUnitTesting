@@ -16,10 +16,10 @@ class MockExampleViewModel: ExampleViewModel, Mock {
     override func calculate(forNumber number: Int) -> Int {
         return value(forFunction: "calculate") ?? 0
     }
-//    
-//    override func makeCall() {
-//        record(function: "makeCall")
-//    }
+    
+    override func makeCall(withDelegate requestDelegate: ViewDelegate, withPath path: String) {
+        record(function: "makeCall", wasCalledWith: [requestDelegate, path])
+    }
 }
 
 class iOSUnitTestingTests: XCTestCase {
@@ -61,9 +61,29 @@ class iOSUnitTestingTests: XCTestCase {
         XCTAssertEqual(subject.thirdLabel.text, "your number is 10")
     }
     
-//    func testThatTouchingTheNetworkButtonHitsTheNetwork() {
-//        _ = subject.view
-//        subject.networkButton.sendActions(for: .touchUpInside)
-//        XCTAssertTrue(mockViewModel.invoked(function: "makeCall"))
-//    }
+    func testThatTouchingTheNetworkButtonHitsTheNetwork() {
+        _ = subject.view
+        subject.pokemonIndex.text = "5"
+        subject.networkButton.sendActions(for: .touchUpInside)
+        XCTAssertTrue(mockViewModel.invoked(function: "makeCall", with: [subject, "5"]))
+    }
+    
+    func testThatTouchingTheNetworkButtonWithoutSettingIndexHitsTheNetworkWithNothing() {
+        _ = subject.view
+        subject.networkButton.sendActions(for: .touchUpInside)
+        XCTAssertTrue(mockViewModel.invoked(function: "makeCall", with: [subject, ""]))
+    }
+    
+    func testThatTheViewDelegateSetsTheLabel() {
+        _ = subject.view
+        subject.viewModel.pokemonName = "Pikachu"
+        subject.pokemonIndex.text = "5"
+        subject.networkButton.sendActions(for: .touchUpInside)
+        XCTAssertTrue(mockViewModel.invoked(function: "makeCall", with: [subject, "5"]))
+        
+        // TODO: Capture the first argument of makeCall and call onSuccess on it
+        
+        subject.onSuccess()
+        XCTAssertEqual(subject.pokemonNameLabel.text, "Pikachu")
+    }
 }

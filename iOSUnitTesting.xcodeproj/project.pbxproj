@@ -20,7 +20,7 @@
 		5ACCB2B91EF8AA4A003CC84D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5ACCB2B71EF8AA4A003CC84D /* Main.storyboard */; };
 		5ACCB2BB1EF8AA4A003CC84D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5ACCB2BA1EF8AA4A003CC84D /* Assets.xcassets */; };
 		5ACCB2BE1EF8AA4A003CC84D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5ACCB2BC1EF8AA4A003CC84D /* LaunchScreen.storyboard */; };
-		5ACCB2C91EF8AA4A003CC84D /* iOSUnitTestingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACCB2C81EF8AA4A003CC84D /* iOSUnitTestingTests.swift */; };
+		5ACCB2C91EF8AA4A003CC84D /* ViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACCB2C81EF8AA4A003CC84D /* ViewControllerTests.swift */; };
 		EA5328D5FEC53BF75923F130 /* Pods_iOSUnitTesting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B97383A5FEF7579B7BC332FE /* Pods_iOSUnitTesting.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,9 +42,9 @@
 		5A7993781EFC9F3F00D56F14 /* ExampleViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleViewModelTests.swift; sourceTree = "<group>"; };
 		5A79937A1EFC9F6E00D56F14 /* ExampleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleViewModel.swift; sourceTree = "<group>"; };
 		5A7D07171F094EBE00C2C410 /* Pokemon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
-		5A7D07191F0983D700C2C410 /* Requestor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Requestor.swift; path = Requestor.swift; sourceTree = "<group>"; };
-		5A7D071B1F09844100C2C410 /* ResponseDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResponseDelegate.swift; path = ResponseDelegate.swift; sourceTree = "<group>"; };
-		5A7D071D1F098B9500C2C410 /* ViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewDelegate.swift; path = ViewDelegate.swift; sourceTree = "<group>"; };
+		5A7D07191F0983D700C2C410 /* Requestor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Requestor.swift; sourceTree = "<group>"; };
+		5A7D071B1F09844100C2C410 /* ResponseDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseDelegate.swift; sourceTree = "<group>"; };
+		5A7D071D1F098B9500C2C410 /* ViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewDelegate.swift; sourceTree = "<group>"; };
 		5ACCB2B01EF8AA4A003CC84D /* iOSUnitTesting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSUnitTesting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5ACCB2B31EF8AA4A003CC84D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5ACCB2B51EF8AA4A003CC84D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -53,7 +53,7 @@
 		5ACCB2BD1EF8AA4A003CC84D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5ACCB2BF1EF8AA4A003CC84D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5ACCB2C41EF8AA4A003CC84D /* iOSUnitTestingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSUnitTestingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5ACCB2C81EF8AA4A003CC84D /* iOSUnitTestingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSUnitTestingTests.swift; sourceTree = "<group>"; };
+		5ACCB2C81EF8AA4A003CC84D /* ViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTests.swift; sourceTree = "<group>"; };
 		5ACCB2CA1EF8AA4A003CC84D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		632C7992FB7AA99D6478F3EC /* Pods-iOSUnitTesting.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSUnitTesting.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSUnitTesting/Pods-iOSUnitTesting.release.xcconfig"; sourceTree = "<group>"; };
 		9BF47E07B4AB01C1FD0A30EB /* Pods-iOSUnitTestingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSUnitTestingTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSUnitTestingTests/Pods-iOSUnitTestingTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -133,7 +133,7 @@
 			children = (
 				5A7993781EFC9F3F00D56F14 /* ExampleViewModelTests.swift */,
 				5ACCB2CA1EF8AA4A003CC84D /* Info.plist */,
-				5ACCB2C81EF8AA4A003CC84D /* iOSUnitTestingTests.swift */,
+				5ACCB2C81EF8AA4A003CC84D /* ViewControllerTests.swift */,
 			);
 			path = iOSUnitTestingTests;
 			sourceTree = "<group>";
@@ -367,7 +367,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A7993791EFC9F3F00D56F14 /* ExampleViewModelTests.swift in Sources */,
-				5ACCB2C91EF8AA4A003CC84D /* iOSUnitTestingTests.swift in Sources */,
+				5ACCB2C91EF8AA4A003CC84D /* ViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
