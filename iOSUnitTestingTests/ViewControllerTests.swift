@@ -2,26 +2,6 @@ import XCTest
 import Moxie
 @testable import iOSUnitTesting
 
-class MockNavigator: Navigator, Mock {
-    var moxie = Moxie()
-    
-    override func show(caller: UIViewController, destination: String) {
-        record(function: "show", wasCalledWith: [caller, destination])
-    }
-}
-
-class MockExampleViewModel: ExampleViewModel, Mock {
-    var moxie = Moxie()
-    
-    override func calculate(forNumber number: Int) -> Int {
-        return value(forFunction: "calculate") ?? 0
-    }
-    
-    override func makeCall(withDelegate requestDelegate: ViewDelegate, withPath path: String) {
-        record(function: "makeCall", wasCalledWith: [requestDelegate, path])
-    }
-}
-
 class iOSUnitTestingTests: XCTestCase {
     var subject: ViewController!
     var mockNavigator: MockNavigator!
@@ -85,5 +65,25 @@ class iOSUnitTestingTests: XCTestCase {
         
         subject.onSuccess()
         XCTAssertEqual(subject.pokemonNameLabel.text, "Pikachu")
+    }
+}
+
+class MockNavigator: Navigator, Mock {
+    var moxie = Moxie()
+    
+    override func show(caller: UIViewController, destination: String) {
+        record(function: "show", wasCalledWith: [caller, destination])
+    }
+}
+
+class MockExampleViewModel: ExampleViewModel, Mock {
+    var moxie = Moxie()
+    
+    override func calculate(forNumber number: Int) -> Int {
+        return value(forFunction: "calculate") ?? 0
+    }
+    
+    override func makeCall(withDelegate requestDelegate: ViewDelegate, withPath path: String) {
+        record(function: "makeCall", wasCalledWith: [requestDelegate, path])
     }
 }

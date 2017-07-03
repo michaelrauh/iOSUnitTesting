@@ -8,6 +8,10 @@ class Pokemon: Mappable {
         
     }
     
+    init() {
+        
+    }
+    
     func mapping(map: Map) {
         name    <- map["name"]
     }

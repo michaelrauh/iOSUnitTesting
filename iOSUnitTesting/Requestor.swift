@@ -2,7 +2,11 @@ import ObjectMapper
 import AlamofireObjectMapper
 import Alamofire
 
-class Requestor {
+protocol RequestorProtocol {
+    func request<T: ResponseDelegate>(withDelegate delegate: T, withPath path: String) 
+}
+
+class Requestor: RequestorProtocol {
     static let shared = Requestor()
     
     private init(){}
